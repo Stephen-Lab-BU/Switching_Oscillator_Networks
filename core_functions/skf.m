@@ -76,6 +76,11 @@ for t=2:T+1
             % one-step covariance
             V_cov_fil(:,:,i,j,t) = (I - K(:,:,i,j,t)*H_j)*A_j* V_ij(:,:,i,j,t-1);
 
+            % likelihood of observing y_t given y_1:t-1, S_t=j, S_t-1=i
+            msr_res = y(t,:) - (H_j*x_minus)';
+            covar = H_j*V_minus*H_j' + R_j;
+            L(i,j) = (det(covar))^(-1/2)*exp((-1/2)*(msr_res*inv(covar))*msr_res');
+
             % numerator of W_ij
             numr(i,j,t) = L(i,j)*C(i,j)*W_j(t-1,i);
         end

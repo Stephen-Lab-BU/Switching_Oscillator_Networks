@@ -342,17 +342,17 @@ mat = [cos(theta1) -sin(theta1); sin(theta1) cos(theta1)];
 
 % state1
 A(:,:,1) = blkdiag(rho(1,1)*mat, rho(2,1)*mat, rho(3,1)*mat, rho(4,1)*mat);
-H(:,:,1) = squeeze(B(1,:,:));
+H(:,:,1) = B;
 R(:,:,1) = var_obs_noi * eye(n);
 
 % state2
 A(:,:,2) = A(:,:,1);
-H(:,:,2) = squeeze(B(2,:,:));
+H(:,:,2) = B;
 R(:,:,2) = var_obs_noi * eye(n);
 
 % state3
 A(:,:,3) = A(:,:,1);
-H(:,:,3) = squeeze(B(3,:,:));
+H(:,:,3) = B;
 R(:,:,3) = var_obs_noi * eye(n);
 
 % Q initialization
