@@ -20,9 +20,9 @@ The detailed explantion of the code is at the top of each Matlab script file. Be
   * sim_DIM_toy.m -- simulation file for the toy example of the Directed Influence Model (DIM)
 
 * model_evaluations
-  * sim_COM_eval.m -- simulation file for model evaluations of the Common Oscillator Model (COM)
-  * sim_CNM_eval.m -- simulation file for model evaluations of the Correlated Noise Model (CNM)
-  * sim_DIM_eval.m -- simulation file for model evaluations of the Directed Influence Model (DIM)
+  * sim_COM_eval.m -- simulation setting file for model evaluations of the Common Oscillator Model (COM)
+  * sim_CNM_eval.m -- simulation setting file for model evaluations of the Correlated Noise Model (CNM)
+  * sim_DIM_eval.m -- simulation setting file for model evaluations of the Directed Influence Model (DIM)
   * eval_COM_fit.m -- model evaluations for the fits from the Common Oscillator Model
   * eval_CNM_fit.m -- model evaluations for the fits from the Correlated Noise Model
   * eval_DIM_fit.m -- model evaluations for the fits from the Directed Influence Model
