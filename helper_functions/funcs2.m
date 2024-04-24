@@ -119,7 +119,7 @@ classdef funcs2
             end
         end
 
-        % ===== create random A matrix =====
+        % ===== create random A matrix (aAR=0.9) =====
         % randomly weakly correlated
         % random phase between -pi to pi
         % random rho between interval (a,b) using a + (b-a)*rand(1)
@@ -129,6 +129,38 @@ classdef funcs2
             b = 0.2;
             % on diagonal - rotation matrix with osci. freq
             rho = .9;
+            theta = (2*pi*osc_freq)*(1/fs);
+            for i=1:k
+                for j=1:k
+                    if i == j
+                        a0(i*2-1,j*2-1) = rho*cos(theta);
+                        a0(i*2,j*2-1) = rho*sin(theta);
+                        a0(i*2-1,j*2) = rho * -sin(theta);
+                        a0(i*2,j*2) = rho * cos(theta);                        
+                    else
+                        rdrho = a + (b-a)*rand(1);
+                        rdtheta = -pi + (2*pi)*rand(1);
+                        
+                        a0(i*2-1,j*2-1) = rdrho * cos(rdtheta);
+                        a0(i*2,j*2-1) = rdrho * sin(rdtheta);
+                        a0(i*2-1,j*2) = rdrho * -sin(rdtheta);
+                        a0(i*2,j*2) = rdrho * cos(rdtheta);
+                    end
+                end
+            end
+        end
+        
+        % ===== create random A matrix =====
+        % randomly weakly correlated
+        % rho between 0.01~0.2 -- a=0.01 & b=0.2
+        % random phase between -pi to pi
+        % random value between interval (a,b) using a + (b-a)*rand(1)
+        function a0 = randa2(k,osc_freq,fs,aAR)
+            a0 = eye(2*k);
+            a = 0.01;
+            b = 0.2;
+            % on diagonal - rotation matrix with osci. freq
+            rho = aAR;
             theta = (2*pi*osc_freq)*(1/fs);
             for i=1:k
                 for j=1:k
