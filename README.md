@@ -1,8 +1,8 @@
 # State_Space_Oscillator_Models
 
-Code repository for all of the methods described and the simulation studies performed in the paper Switching Models of Oscillatory Networks Greatly Improve Inference of Dynamic Functional Connectivity.
+Code repository for all of the methods described and the simulation studies performed in the paper *Switching Models of Oscillatory Networks Greatly Improve Inference of Dynamic Functional Connectivity*.
 
-The detailed explantion of the code is at the top of each Matlab script file. Below is a brief description of all scripts in this repo.
+The detailed explanation of the code is at the top of each Matlab script file. Below is a brief description of all scripts in this repo.
 
 * core_functions
   * skf.m -- switching Kalman filter
