@@ -1,4 +1,4 @@
-# State_Space_Oscillator_Models
+# Switching_Oscillator_Networks
 
 Code repository for all of the methods described and the simulation studies performed in the paper *Switching Models of Oscillatory Networks Greatly Improve Inference of Dynamic Functional Connectivity*.
 
