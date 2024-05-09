@@ -1,6 +1,6 @@
 # Switching_Oscillator_Networks
 
-Code repository for all of the methods described and the simulation studies performed in the paper *Switching Models of Oscillatory Networks Greatly Improve Inference of Dynamic Functional Connectivity*, [arXiv:2404.18854] (https://arxiv.org/abs/2404.18854).
+Code repository for all of the methods described and the simulation studies performed in the paper *Switching Models of Oscillatory Networks Greatly Improve Inference of Dynamic Functional Connectivity*, [arXiv:2404.18854](https://arxiv.org/abs/2404.18854).
 
 The detailed explanation of the code is at the top of each Matlab script file. Below is a brief description of all scripts in this repo.
 
